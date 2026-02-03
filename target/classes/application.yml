@@ -1,0 +1,17 @@
+sifen:
+  certificate:
+    path: certs/F1T_68113.p12  # Change this to your .p12 filename
+    password: ${SIFEN_CERT_PASSWORD:X1MTj!1K}  # Set this in your environment variables
+  endpoints:
+    test:
+      recibe: https://sifen-test.set.gov.py/de/ws/async/recibe-lote.wsdl
+      consulta: https://sifen-test.set.gov.py/de/ws/consultas/consulta.wsdl
+      evento: https://sifen-test.set.gov.py/de/ws/eventos/evento.wsdl
+    production:
+      recibe: https://sifen.set.gov.py/de/ws/async/recibe-lote
+
+logging:
+  level:
+    org.springframework.ws: TRACE
+    org.springframework.ws.client.MessageTracing.sent: TRACE
+    org.springframework.ws.client.MessageTracing.received: TRACE

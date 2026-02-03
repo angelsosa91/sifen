@@ -1,0 +1,126 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.neosystem:sifen >-------------------------
+[INFO] Building sifen 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sifen ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ sifen ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sifen ---
+[INFO] skip non existing resourceDirectory C:\Users\angel\Documentos\NeoSystem\Proyectos\sifen\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ sifen ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ sifen ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.neosystem.sifen.domain.xml.DocumentoElectronicoTest
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:rDE xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://ekuatia.set.gov.py/sifen/xsd">
+    <dVerFor>150</dVerFor>
+    <DE Id="01800015681001001000000122026020311234567891">
+        <dId>01800015681001001000000122026020311234567891</dId>
+        <dDvId>1</dDvId>
+        <dFecFirma>2026-02-03T10:00:00</dFecFirma>
+        <dSisFact>1</dSisFact>
+        <gOpeDE>
+            <iTipEmi>1</iTipEmi>
+            <dDesTipEmi>Normal</dDesTipEmi>
+            <dCodSeg>123456</dCodSeg>
+        </gOpeDE>
+        <gTimb>
+            <iTiDE>1</iTiDE>
+            <dDesTiDE>Factura Electronica</dDesTiDE>
+            <dNumTim>12345678</dNumTim>
+            <dEst>001</dEst>
+            <dPunExp>001</dPunExp>
+            <dNumDoc>0000001</dNumDoc>
+            <dFeIniT>2026-01-01</dFeIniT>
+        </gTimb>
+        <gDatGralOpe>
+            <dFeEmiDE>2026-02-03T10:00:00</dFeEmiDE>
+            <gEmis>
+                <dRucEm>80001568</dRucEm>
+                <dDVEmi>1</dDVEmi>
+                <iTipCont>2</iTipCont>
+                <dNomEmi>Empresa Test S.A.</dNomEmi>
+                <dDirEmi>Calle Falsa 123</dDirEmi>
+                <dNumCas>123</dNumCas>
+                <cDepEmi>1</cDepEmi>
+                <dDesDepEmi>Capital</dDesDepEmi>
+                <cCiuEmi>1</cCiuEmi>
+                <dDesCiuEmi>Asuncion</dDesCiuEmi>
+                <dTelEmi>021123456</dTelEmi>
+                <dEmailE>test@test.com</dEmailE>
+            </gEmis>
+            <gDatRec>
+                <iNatRec>1</iNatRec>
+                <iTiOpe>1</iTiOpe>
+                <cPaisRec>PRY</cPaisRec>
+                <dDesPaisRe>Paraguay</dDesPaisRe>
+                <dNomRec>Juan Perez</dNomRec>
+                <dDirRec>Calle 1</dDirRec>
+                <dNumCasRec>1</dNumCasRec>
+                <cDepRec>1</cDepRec>
+                <dDesDepRec>Capital</dDesDepRec>
+                <cCiuRec>1</cCiuRec>
+                <dDesCiuRec>Asuncion</dDesCiuRec>
+            </gDatRec>
+        </gDatGralOpe>
+        <gDtipDE>
+            <gCamFE>
+                <iIndPres>1</iIndPres>
+                <dDesIndPres>Presencial</dDesIndPres>
+            </gCamFE>
+        </gDtipDE>
+        <gTotSub>
+            <dTotOpe>10000</dTotOpe>
+            <dTotGralOpe>10000</dTotGralOpe>
+            <dTotIVA>909</dTotIVA>
+        </gTotSub>
+        <gCamItem>
+            <dCodInt>P001</dCodInt>
+            <dDesProSer>Producto 1</dDesProSer>
+            <cUniMed>77</cUniMed>
+            <dDesUniMed>Unidad</dDesUniMed>
+            <dCantProSer>1</dCantProSer>
+            <gValorItem>
+                <dPUnitPro>10000</dPUnitPro>
+                <dTotBruOpeItem>10000</dTotBruOpeItem>
+                <gValorRestaItem>
+                    <dTotOpeItem>10000</dTotOpeItem>
+                </gValorRestaItem>
+            </gValorItem>
+            <gCamIVA>
+                <iAfecIVA>1</iAfecIVA>
+                <dDesAfecIVA>Gravado 10</dDesAfecIVA>
+                <dPropIVA>100</dPropIVA>
+                <dTasaIVA>10</dTasaIVA>
+                <dLiqIVAItem>909</dLiqIVAItem>
+            </gCamIVA>
+        </gCamItem>
+    </DE>
+</ns3:rDE>
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.252 s -- in com.neosystem.sifen.domain.xml.DocumentoElectronicoTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.262 s
+[INFO] Finished at: 2026-02-03T17:50:02-03:00
+[INFO] ------------------------------------------------------------------------

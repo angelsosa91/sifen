@@ -1,0 +1,3 @@
+com\neosystem\sifen\domain\CdcServiceTest.class
+com\neosystem\sifen\CertificateLoadingTest.class
+com\neosystem\sifen\infrastructure\adapters\sifen\XmlSigningServiceTest.class
