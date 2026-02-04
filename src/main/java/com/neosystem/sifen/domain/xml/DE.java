@@ -7,7 +7,7 @@ import lombok.Data;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = {
         "dId", "dDvId", "dFecFirma", "dSisFact",
-        "gOpeDE", "gTimb", "gDatGralOpe", "gDtipDE", "gTotSub", "gCamItem", "gCamOSP", "gTransp" // Add others as we go
+        "gOpeDE", "gTimb", "gDatGralOpe", "gDtipDE", "gTotSub", "gCamItem", "gCamOSP", "gTransp", "gCamRef"
 })
 public class DE {
 
@@ -50,4 +50,7 @@ public class DE {
 
     @XmlElement(name = "gTransp")
     private Object gTransp;
+
+    @XmlElement(name = "gCamRef")
+    private java.util.List<GCamRef> gCamRef;
 }

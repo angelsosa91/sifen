@@ -21,12 +21,14 @@ class CdcServiceTest {
         String establishment = "001";
         String point = "001";
         String number = "0000001";
+        String emissionType = "1";
         String date = "20240203";
-        String securityCode = "12345678";
+        String securityCode = "123456789";
         String transmission = "1";
 
-        String cdc = cdcService.generateCdc(dType, ruc, dv, establishment, point, number, date, securityCode, transmission);
-        
+        String cdc = cdcService.generateCdc(dType, ruc, dv, establishment, point, number, emissionType, date,
+                securityCode, transmission);
+
         assertEquals(44, cdc.length(), "CDC must be 44 digits long");
         System.out.println("Generated CDC: " + cdc);
     }

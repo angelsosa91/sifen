@@ -62,6 +62,41 @@ public class SifenSoapClientAdapter {
         return sendRawSoapRequest(url, requestBody);
     }
 
+    public String recibeLote(java.util.List<String> signedXmls, String id) {
+        String url = "https://sifen-test.set.gov.py/de/ws/transmision/recepcion-lote.wsdl";
+
+        try {
+            // 1. Build the Batch XML
+            StringBuilder batchXml = new StringBuilder("<rEnviLoteDe xmlns=\"http://ekuatia.set.gov.py/sifen/xsd\">");
+            batchXml.append("<dId>").append(id).append("</dId>");
+            for (String xml : signedXmls) {
+                // Remove XML Declaration from each
+                batchXml.append("<xDE>").append(xml.replaceAll("\\<\\?xml.+?\\?\\>", "").trim()).append("</xDE>");
+            }
+            batchXml.append("</rEnviLoteDe>");
+
+            // 2. Compress to ZIP (Base64)
+            java.io.ByteArrayOutputStream baos = new java.io.ByteArrayOutputStream();
+            try (java.util.zip.ZipOutputStream zos = new java.util.zip.ZipOutputStream(baos)) {
+                java.util.zip.ZipEntry entry = new java.util.zip.ZipEntry("batch.xml");
+                zos.putNextEntry(entry);
+                zos.write(batchXml.toString().getBytes(java.nio.charset.StandardCharsets.UTF_8));
+                zos.closeEntry();
+            }
+            String base64Zip = java.util.Base64.getEncoder().encodeToString(baos.toByteArray());
+
+            // 3. Wrap in SOAP
+            String requestBody = "<rEnviLoteDe xmlns=\"http://ekuatia.set.gov.py/sifen/xsd\">" +
+                    "  <dId>" + id + "</dId>" +
+                    "  <xZipDE>" + base64Zip + "</xZipDE>" +
+                    "</rEnviLoteDe>";
+
+            return sendRawSoapRequest(url, requestBody);
+        } catch (java.io.IOException e) {
+            throw new RuntimeException("Error preparing batch ZIP: " + e.getMessage(), e);
+        }
+    }
+
     private String sendRawSoapRequest(String urlString, String bodyContent) {
         javax.net.ssl.HttpsURLConnection connection = null;
         try {
