@@ -1,5 +1,6 @@
 .idea
 /certs
+/target
 /temp_*
 *.pdf
 *.txt
