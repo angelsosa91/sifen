@@ -27,6 +27,7 @@ logging:
   level:
     root: INFO
     com.neosystem.sifen: DEBUG
+    com.roshka.sifen: DEBUG
     org.springframework.ws: TRACE
     org.springframework.xml: TRACE
     org.springframework.ws.client.MessageTracing.sent: TRACE
