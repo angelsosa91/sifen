@@ -4,13 +4,6 @@ import com.neosystem.sifen.infrastructure.config.SifenProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.ws.client.core.WebServiceTemplate;
-import jakarta.xml.soap.MimeHeaders;
-import org.springframework.ws.client.core.WebServiceMessageCallback;
-import org.springframework.ws.WebServiceMessage;
-import java.io.IOException;
-import javax.xml.transform.TransformerException;
-import org.springframework.ws.soap.saaj.SaajSoapMessage;
-import org.springframework.ws.soap.client.core.SoapActionCallback;
 
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
@@ -23,11 +16,12 @@ public class SifenSoapClientAdapter {
 
     private final WebServiceTemplate webServiceTemplate;
     private final SifenProperties sifenProperties;
+    private final javax.net.ssl.SSLContext sifenSSLContext;
 
     public String recibe(String signedXml, String id) {
-        String url = "https://sifen-test.set.gov.py/de/ws/transmision/recepcion-de"; // Standard recibe URL
+        String url = "https://sifen-test.set.gov.py/de/ws/sync/recibe.wsdl";
 
-        // Remove XML Declaration if present to avoid nesting issues
+        // Remove XML Declaration
         signedXml = signedXml.replaceAll("\\<\\?xml.+?\\?\\>", "").trim();
 
         String requestBody = "<rEnviDe xmlns=\"http://ekuatia.set.gov.py/sifen/xsd\">" +
@@ -35,59 +29,95 @@ public class SifenSoapClientAdapter {
                 "  <xDe>" + signedXml + "</xDe>" +
                 "</rEnviDe>";
 
-        StringWriter writer = new StringWriter();
-        StreamSource source = new StreamSource(new StringReader(requestBody));
-        StreamResult result = new StreamResult(writer);
-
-        webServiceTemplate.sendSourceAndReceiveToResult(url, source, new WebServiceMessageCallback() {
-            @Override
-            public void doWithMessage(WebServiceMessage message) throws IOException, TransformerException {
-                if (message instanceof SaajSoapMessage) {
-                    SaajSoapMessage saajSoapMessage = (SaajSoapMessage) message;
-                    MimeHeaders headers = saajSoapMessage.getSaajMessage().getMimeHeaders();
-                    headers.setHeader("User-Agent", "J-Sifen-Client/1.0 (Java)");
-                    headers.setHeader("Content-Type",
-                            "application/soap+xml; charset=utf-8; action=\"http://ekuatia.set.gov.py/sifen/xsd/rEnviDe\"");
-                }
-            }
-        }, result);
-
-        return writer.toString();
+        return sendRawSoapRequest(url, requestBody);
     }
 
     public String consultaRuc(String ruc) {
-        String url = "https://sifen-test.set.gov.py/de/ws/consultas/consulta-ruc";
+        String url = "https://sifen-test.set.gov.py/de/ws/consultas/consulta-ruc.wsdl";
 
-        // SIFEN V150: Consulta RUC structure
         String requestBody = "<rConsRuc xmlns=\"http://ekuatia.set.gov.py/sifen/xsd\">" +
                 "  <dVerFor>150</dVerFor>" +
                 "  <dId>1</dId>" +
                 "  <dRucRec>" + ruc + "</dRucRec>" +
                 "</rConsRuc>";
 
-        StringWriter writer = new StringWriter();
-        StreamSource source = new StreamSource(new StringReader(requestBody));
-        StreamResult result = new StreamResult(writer);
+        return sendRawSoapRequest(url, requestBody);
+    }
 
-        webServiceTemplate.sendSourceAndReceiveToResult(url, source, new WebServiceMessageCallback() {
-            @Override
-            public void doWithMessage(org.springframework.ws.WebServiceMessage message)
-                    throws java.io.IOException, javax.xml.transform.TransformerException {
-                if (message instanceof SaajSoapMessage) {
-                    SaajSoapMessage saajSoapMessage = (SaajSoapMessage) message;
-                    try {
-                        MimeHeaders headers = saajSoapMessage.getSaajMessage().getMimeHeaders();
-                        headers.setHeader("User-Agent", "J-Sifen-Client/1.0 (Java)");
-                        // Ensure SOAP 1.2 Content-Type
-                        headers.setHeader("Content-Type",
-                                "application/soap+xml; charset=utf-8; action=\"http://ekuatia.set.gov.py/sifen/xsd/rConsRuc\"");
-                    } catch (Exception e) {
-                        e.printStackTrace(); // Minimal handling for test
-                    }
-                }
+    public String consultaDe(String cdc) {
+        String url = "https://sifen-test.set.gov.py/de/ws/consultas/consulta.wsdl";
+
+        String requestBody = "<rEnviConsDeRequest xmlns=\"http://ekuatia.set.gov.py/sifen/xsd\">" +
+                "  <dId>1</dId>" +
+                "  <dCDC>" + cdc + "</dCDC>" +
+                "</rEnviConsDeRequest>";
+
+        return sendRawSoapRequest(url, requestBody);
+    }
+
+    public String recibeEvento(String signedEventXml, String id) {
+        String url = "https://sifen-test.set.gov.py/de/ws/eventos/evento.wsdl";
+
+        // Remove XML Declaration
+        signedEventXml = signedEventXml.replaceAll("\\<\\?xml.+?\\?\\>", "").trim();
+
+        String requestBody = "<rEnviEventoDe xmlns=\"http://ekuatia.set.gov.py/sifen/xsd\">" +
+                "  <dId>" + id + "</dId>" +
+                "  <dEvReg>" +
+                signedEventXml +
+                "  </dEvReg>" +
+                "</rEnviEventoDe>";
+
+        return sendRawSoapRequest(url, requestBody);
+    }
+
+    private String sendRawSoapRequest(String urlString, String bodyContent) {
+        javax.net.ssl.HttpsURLConnection connection = null;
+        try {
+            java.net.URL url = new java.net.URL(urlString);
+            connection = (javax.net.ssl.HttpsURLConnection) url.openConnection();
+            connection.setSSLSocketFactory(sifenSSLContext.getSocketFactory());
+            connection.setRequestMethod("POST");
+            connection.setDoOutput(true);
+            connection.setConnectTimeout(15000);
+            connection.setReadTimeout(45000);
+
+            // Headers from rshk-jsifenlib
+            connection.setRequestProperty("Content-Type", "application/xml; charset=utf-8");
+            connection.setRequestProperty("User-Agent", "rshk-jsifenlib/1.0 (LVEA)");
+
+            // Build Full SOAP Envelope
+            String soapEnvelope = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
+                    "<env:Envelope xmlns:env=\"http://www.w3.org/2003/05/soap-envelope\">" +
+                    "<env:Header/>" +
+                    "<env:Body>" +
+                    bodyContent +
+                    "</env:Body>" +
+                    "</env:Envelope>";
+
+            try (java.io.OutputStream os = connection.getOutputStream()) {
+                byte[] input = soapEnvelope.getBytes(java.nio.charset.StandardCharsets.UTF_8);
+                os.write(input, 0, input.length);
             }
-        }, result);
 
-        return writer.toString();
+            int status = connection.getResponseCode();
+            java.io.InputStream is = (status >= 400) ? connection.getErrorStream() : connection.getInputStream();
+
+            if (is == null) {
+                return "Error: No response stream (Status: " + status + ")";
+            }
+
+            try (java.io.BufferedReader br = new java.io.BufferedReader(
+                    new java.io.InputStreamReader(is, java.nio.charset.StandardCharsets.UTF_8))) {
+                return br.lines().collect(java.util.stream.Collectors.joining("\n"));
+            }
+
+        } catch (java.io.IOException e) {
+            throw new RuntimeException("Error communicating with SIFEN: " + e.getMessage(), e);
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
     }
 }

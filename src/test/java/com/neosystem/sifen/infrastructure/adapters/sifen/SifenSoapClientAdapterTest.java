@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 class SifenSoapClientAdapterTest {
@@ -160,5 +161,37 @@ class SifenSoapClientAdapterTest {
             e.printStackTrace();
             throw e;
         }
+    }
+
+    @Test
+    void testConsultaDe() {
+        // Test with a dummy CDC (44 chars) to verify transport (will likely return
+        // failure from SIFEN but 200 OK HTTP)
+        String dummyCdc = "01800015681001001000000122026020311234567891";
+        String response = sifenSoapClientAdapter.consultaDe(dummyCdc);
+
+        System.out.println("Consulta DE Response: " + response);
+        assertThat(response).isNotNull();
+        assertThat(response).doesNotContain("Error: No response stream");
+        // We expect a valid SOAP response
+        assertThat(response).contains("ns2:rEnviConsDeResponse");
+    }
+
+    @Test
+    void testRecibeEvento() {
+        // Mock a signed event XML (gGroupGesEve)
+        String signedEventXml = "<gGroupGesEve xmlns=\"http://ekuatia.set.gov.py/sifen/xsd\">" +
+                "<rGesEve><dVerFor>150</dVerFor><dId>1</dId><dFecFirma>2026-02-03T12:00:00</dFecFirma></rGesEve>" +
+                "<Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"\"/><SignatureMethod Algorithm=\"\"/><Reference><DigestMethod Algorithm=\"\"/><DigestValue>abc</DigestValue></Reference></SignedInfo><SignatureValue>xyz</SignatureValue></Signature>"
+                +
+                "</gGroupGesEve>";
+
+        String response = sifenSoapClientAdapter.recibeEvento(signedEventXml, "1");
+
+        System.out.println("Recibe Evento Response: " + response);
+        assertThat(response).isNotNull();
+        assertThat(response).doesNotContain("Error: No response stream");
+        // We expect a valid SOAP response
+        assertThat(response).contains("ns2:rRetEnviEventoDe");
     }
 }

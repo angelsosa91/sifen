@@ -1,0 +1,372 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< com.neosystem:sifen >-------------------------
+[INFO] Building sifen 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sifen ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ sifen ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sifen ---
+[INFO] skip non existing resourceDirectory C:\Users\angel\Documentos\NeoSystem\Proyectos\sifen\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ sifen ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ sifen ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest
+21:04:55.130 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest]: SifenSoapClientAdapterTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:04:55.241 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.neosystem.sifen.SifenApplication for test class com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.2)
+
+2026-02-03T21:04:55.683-03:00  INFO 27232 --- [           main] c.n.s.i.a.s.SifenSoapClientAdapterTest   : Starting SifenSoapClientAdapterTest using Java 21.0.10 with PID 27232 (started by angel in C:\Users\angel\Documentos\NeoSystem\Proyectos\sifen)
+2026-02-03T21:04:55.684-03:00  INFO 27232 --- [           main] c.n.s.i.a.s.SifenSoapClientAdapterTest   : No active profile set, falling back to 1 default profile: "default"
+2026-02-03T21:04:56.432-03:00  WARN 27232 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-02-03T21:04:56.460-03:00  INFO 27232 --- [           main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2026-02-03T21:04:56.484-03:00  INFO 27232 --- [           main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Creating SAAJ 1.3 MessageFactory with SOAP 1.2 Protocol
+2026-02-03T21:04:56.493-03:00 DEBUG 27232 --- [           main] o.s.ws.soap.saaj.SaajSoapMessageFactory  : Using MessageFactory class [com.sun.xml.messaging.saaj.soap.ver1_2.SOAPMessageFactory1_2Impl]
+2026-02-03T21:04:57.116-03:00 DEBUG 27232 --- [           main] yloadRootAnnotationMethodEndpointMapping : Looking for endpoints in application context: org.springframework.web.context.support.GenericWebApplicationContext@79b663b3, started on Tue Feb 03 21:04:55 PYT 2026
+2026-02-03T21:04:57.118-03:00 DEBUG 27232 --- [           main] oapActionAnnotationMethodEndpointMapping : Looking for endpoints in application context: org.springframework.web.context.support.GenericWebApplicationContext@79b663b3, started on Tue Feb 03 21:04:55 PYT 2026
+2026-02-03T21:04:57.137-03:00 DEBUG 27232 --- [           main] o.s.w.s.e.a.DefaultMethodEndpointAdapter : No MethodArgumentResolvers set, using defaults: [org.springframework.ws.server.endpoint.adapter.method.dom.DomPayloadMethodProcessor@195113de, org.springframework.ws.server.endpoint.adapter.method.MessageContextMethodArgumentResolver@3ebc955b, org.springframework.ws.server.endpoint.adapter.method.SourcePayloadMethodProcessor@21a46ff1, org.springframework.ws.server.endpoint.adapter.method.XPathParamMethodArgumentResolver@11b5f4e2, org.springframework.ws.soap.server.endpoint.adapter.method.SoapMethodArgumentResolver@6bcae9, org.springframework.ws.soap.server.endpoint.adapter.method.SoapHeaderElementMethodArgumentResolver@5aa781f2, org.springframework.ws.server.endpoint.adapter.method.jaxb.XmlRootElementPayloadMethodProcessor@58feb6b0, org.springframework.ws.server.endpoint.adapter.method.jaxb.JaxbElementPayloadMethodProcessor@66d25ba9, org.springframework.ws.server.endpoint.adapter.method.StaxPayloadMethodArgumentResolver@3830f918]
+2026-02-03T21:04:57.139-03:00 DEBUG 27232 --- [           main] o.s.w.s.e.a.DefaultMethodEndpointAdapter : No MethodReturnValueHandlers set, using defaults: [org.springframework.ws.server.endpoint.adapter.method.dom.DomPayloadMethodProcessor@266e9dda, org.springframework.ws.server.endpoint.adapter.method.SourcePayloadMethodProcessor@38883a31, org.springframework.ws.server.endpoint.adapter.method.jaxb.XmlRootElementPayloadMethodProcessor@27a6fef2, org.springframework.ws.server.endpoint.adapter.method.jaxb.JaxbElementPayloadMethodProcessor@7fe8c7db]
+2026-02-03T21:04:57.162-03:00  INFO 27232 --- [           main] c.n.s.i.a.s.SifenSoapClientAdapterTest   : Started SifenSoapClientAdapterTest in 1.785 seconds (process running for 2.628)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\angel\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-02-03T21:04:57.860-03:00 DEBUG 27232 --- [           main] o.s.ws.client.core.WebServiceTemplate    : Opening [org.springframework.ws.transport.http.HttpUrlConnection@14656be5] to [https://sifen-test.set.gov.py/de/ws/consultas/consulta-ruc]
+2026-02-03T21:04:57.962-03:00 TRACE 27232 --- [           main] o.s.ws.client.MessageTracing.sent        : Sent request [<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Header/><env:Body><rConsRuc xmlns="http://ekuatia.set.gov.py/sifen/xsd">  <dVerFor>150</dVerFor>  <dId>1</dId>  <dRucRec>99999901</dRucRec></rConsRuc></env:Body></env:Envelope>]
+2026-02-03T21:04:58.242-03:00 DEBUG 27232 --- [           main] o.s.ws.client.core.WebServiceTemplate    : Received error for request [SaajSoapMessage {http://ekuatia.set.gov.py/sifen/xsd}rConsRuc]
+SOAP Call failed: Error [400]
+org.springframework.ws.client.WebServiceTransportException: Error [400]
+	at org.springframework.ws.client.core.WebServiceTemplate.handleError(WebServiceTemplate.java:666)
+	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:588)
+	at org.springframework.ws.client.core.WebServiceTemplate.sendAndReceive(WebServiceTemplate.java:539)
+	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:493)
+	at org.springframework.ws.client.core.WebServiceTemplate.sendSourceAndReceiveToResult(WebServiceTemplate.java:442)
+	at com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapter.consultaRuc(SifenSoapClientAdapter.java:73)
+	at com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest.testConsultaRuc(SifenSoapClientAdapterTest.java:150)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:767)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$8(TestMethodTestDescriptor.java:217)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:213)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:138)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:68)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Signed XML: <?xml version="1.0" encoding="UTF-8" standalone="no"?><ns3:rDE xmlns:ns3="http://ekuatia.set.gov.py/sifen/xsd" xmlns:ns2="http://www.w3.org/2000/09/xmldsig#"><dVerFor>150</dVerFor><DE Id="01800015681001001000000122026020311234567891"><dId>01800015681001001000000122026020311234567891</dId><dDvId>1</dDvId><dFecFirma>2026-02-03T10:00:00</dFecFirma><dSisFact>1</dSisFact><gOpeDE><iTipEmi>1</iTipEmi><dDesTipEmi>Normal</dDesTipEmi><dCodSeg>123456</dCodSeg></gOpeDE><gTimb><iTiDE>1</iTiDE><dDesTiDE>Factura</dDesTiDE><dNumTim>12345678</dNumTim><dEst>001</dEst><dPunExp>001</dPunExp><dNumDoc>0000001</dNumDoc><dFeIniT>2026-01-01</dFeIniT></gTimb><gDatGralOpe><dFeEmiDE>2026-02-03T10:00:00</dFeEmiDE><gEmis><dRucEm>80001568</dRucEm><dDVEmi>1</dDVEmi><iTipCont>2</iTipCont><dNomEmi>Test S.A.</dNomEmi><dDirEmi>Calle 1</dDirEmi><dNumCas>1</dNumCas><cDepEmi>1</cDepEmi><dDesDepEmi>Capital</dDesDepEmi><cCiuEmi>1</cCiuEmi><dDesCiuEmi>Asu</dDesCiuEmi><dTelEmi>123</dTelEmi><dEmailE>a@a.com</dEmailE></gEmis><gDatRec><iNatRec>1</iNatRec><iTiOpe>1</iTiOpe><cPaisRec>PRY</cPaisRec><dDesPaisRe>Paraguay</dDesPaisRe><dNomRec>Cliente</dNomRec><dDirRec>Calle 2</dDirRec><dNumCasRec>1</dNumCasRec><cDepRec>1</cDepRec><dDesDepRec>Capital</dDesDepRec><cCiuRec>1</cCiuRec><dDesCiuRec>Asu</dDesCiuRec></gDatRec></gDatGralOpe><gDtipDE><gCamFE><iIndPres>1</iIndPres><dDesIndPres>Pres</dDesIndPres></gCamFE></gDtipDE><gTotSub><dTotOpe>100</dTotOpe><dTotGralOpe>100</dTotGralOpe><dTotIVA>0</dTotIVA></gTotSub><gCamItem><dCodInt>1</dCodInt><dDesProSer>Prod</dDesProSer><cUniMed>77</cUniMed><dDesUniMed>Uni</dDesUniMed><dCantProSer>1</dCantProSer><gValorItem><dPUnitPro>100</dPUnitPro><dTotBruOpeItem>100</dTotBruOpeItem><gValorRestaItem><dTotOpeItem>100</dTotOpeItem></gValorRestaItem></gValorItem><gCamIVA><iAfecIVA>3</iAfecIVA><dDesAfecIVA>Exento</dDesAfecIVA><dPropIVA>0</dPropIVA><dTasaIVA>0</dTasaIVA><dLiqIVAItem>0</dLiqIVAItem></gCamIVA></gCamItem></DE><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<Reference URI="">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<DigestValue>CgPZ50SOCq++S2Eyc5pnTFIova0XeL4mQhYUMOpPXps=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>
+NpLrPunHiot9j2ISoZHOxHo5fFRZ4FW89quppmnZ/iU18N5v7IkKP5+Td6yuegxnQI7p3iu6T2A+&#13;
+X1VpnMFb0B+L9bX5iJvxrdq3S9OwHDN0lqm6nWC04XwlsKDq61r8MAl5p7sT4S3CyViggKlP6f1n&#13;
+KKRnI6MMtkgMlZIeId35GVRQ3ygADslh1pnp4m+781srxq9npsu70Oj0Z4QYycYKCGTClYo/oH7L&#13;
+9U0v2egvJrXm67mU3CVWqVAW2I+Wj5ya7hq/c8X5hlxC670GZJZtKSkHP8wGmZSj09eVM3SZuFnL&#13;
+3tdwHTNae4+hhpNbCD9V3KcACL4e9s9dstl3OA==
+</SignatureValue>
+<KeyInfo>
+<X509Data>
+<X509Certificate>
+MIIJAzCCBuugAwIBAgIIEc5yYCzv5LgwDQYJKoZIhvcNAQELBQAwWjEaMBgGA1UEAwwRQ0EtRE9D&#13;
+VU1FTlRBIFMuQS4xFjAUBgNVBAUTDVJVQzgwMDUwMTcyLTExFzAVBgNVBAoMDkRPQ1VNRU5UQSBT&#13;
+LkEuMQswCQYDVQQGEwJQWTAeFw0yNjAxMjMxODIwMDBaFw0yNzAxMjMxODIwMDBaMIGvMSMwIQYD&#13;
+VQQDDBpBTkdFTCBEQVZJRCBNQUxET05BRE8gU09TQTESMBAGA1UEBRMJQ0k0OTQ1MjU0MRQwEgYD&#13;
+VQQqDAtBTkdFTCBEQVZJRDEXMBUGA1UEBAwOTUFMRE9OQURPIFNPU0ExCzAJBgNVBAsMAkYxMSsw&#13;
+KQYDVQQKDCJDRVJUSUZJQ0FETyBDVUFMSUZJQ0FETyBUUklCVVRBUklPMQswCQYDVQQGEwJQWTCC&#13;
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAILs8QvkSrW1DaKgfjDdHRvvdYIgwYT6Ix1J&#13;
+IayhxaCDCWgS+/JzEjavhqrLY3JoNDBH9hgacxD2bb7r3S0BEWOkCBkCufbn7XCnddBvM6A81njm&#13;
+Q9FP67+fXTO5R6vtO76COFmLx1sfRke2tI2oAcM4mlcq6T9lzkCNyC22e1Qm2m0HS2E4rOAq0Ti0&#13;
+qzMZkGDjWp8XUOzXWUe+mJiyNCLINGweZhJW3ucPkAAdp2yQRq/0RmXLSHXkN4J1mHtuxNW1Epdy&#13;
+y99yMwfTzg+4iG+pu0HeYXe4ec9xJCfVdowOcwBIcFEQHoaOuyFhNNUMsK0ESG6lEkDp6U5X22Pu&#13;
+XNsCAwEAAaOCBHUwggRxMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUoT2FK83YLJYfOQIMn1M7&#13;
+WNiVC3swgZQGCCsGAQUFBwEBBIGHMIGEMFUGCCsGAQUFBzAChklodHRwczovL3d3dy5kaWdpdG8u&#13;
+Y29tLnB5L3VwbG9hZHMvY2VydGlmaWNhZG8tZG9jdW1lbnRhLXNhLTE1MzUxMTc3NzEuY3J0MCsG&#13;
+CCsGAQUFBzABhh9odHRwczovL3d3dy5kaWdpdG8uY29tLnB5L29jc3AvMIHnBgNVHREEgd8wgdyB&#13;
+G2FtYWxkb25hZG9AbmVvc3lzdGVtLmNvbS5weaSBvDCBuTEpMCcGA1UEDQwgRklSTUEgRUxFQ1RS&#13;
+T05JQ0EgZGUgbml2ZWwgbWVkaW8xHjAcBgNVBAwMFUdFUkVOVEUgREUgVEVDTk9MT0dJQTEWMBQG&#13;
+A1UEBRMNUlVDODAwOTQxNjUtOTElMCMGA1UECwwcVEVDTk9MT0dJQSBERSBMQSBJTkZPUk1BQ0lP&#13;
+TjEtMCsGA1UECgwkTkVPIFNZU1RFTSBQQVJBR1VBWSBTT0NJRURBRCBBTk9OSU1BMIIB5QYDVR0g&#13;
+BIIB3DCCAdgwggHUBg0rBgEEAYL5OwEBAQwBMIIBwTAvBggrBgEFBQcCARYjaHR0cHM6Ly93d3cu&#13;
+ZGlnaXRvLmNvbS5weS9kZXNjYXJnYXMwggGMBggrBgEFBQcCAjCCAX4eggF6AEMAZQByAHQAaQBm&#13;
+AGkAYwBhAGQAbwAgAGMAdQBhAGwAaQBmAGkAYwBhAGQAbwAgAGQAZQAgAGYAaQByAG0AYQAgAGUA&#13;
+bABlAGMAdAByAPMAbgBpAGMAYQAgAHQAaQBwAG8AIABGADEAIAAoAGMAbABhAHYAZQBzACAAZQBu&#13;
+ACAAbQDzAGQAdQBsAG8AIABzAG8AZgB0AHcAYQByAGUAKQAsACAAcwB1AGoAZQB0AGEAIABhACAA&#13;
+bABhAHMAIABjAG8AbgBkAGkAYwBpAG8AbgBlAHMAIABkAGUAIAB1AHMAbwAgAGUAeABwAHUAZQBz&#13;
+AHQAYQBzACAAZQBuACAAbABhACAARABlAGMAbABhAHIAYQBjAGkA8wBuACAAZABlACAAUAByAOEA&#13;
+YwB0AGkAYwBhAHMAIABkAGUAIABDAGUAcgB0AGkAZgBpAGMAYQBjAGkA8wBuACAAZABlACAARABP&#13;
+AEMAVQBNAEUATgBUAEEAIABTAC4AQQAuMCoGA1UdJQEB/wQgMB4GCCsGAQUFBwMCBggrBgEFBQcD&#13;
+BAYIKwYBBQUHAwEwewYDVR0fBHQwcjA0oDKgMIYuaHR0cHM6Ly93d3cuZGlnaXRvLmNvbS5weS9j&#13;
+cmwvZG9jdW1lbnRhX2NhLmNybDA6oDigNoY0aHR0cHM6Ly93d3cuZG9jdW1lbnRhLmNvbS5weS9k&#13;
+aWdpdG8vZG9jdW1lbnRhX2NhLmNybDAdBgNVHQ4EFgQUQcwR8FwkDqQiuJGYNz3loJdLF2gwDgYD&#13;
+VR0PAQH/BAQDAgXgMA0GCSqGSIb3DQEBCwUAA4ICAQB+tF5qEU9WKV+7KrUvy5nFPuSf5Lrw2qM6&#13;
+52i5oXQmDVbS+hV2NPTE16NYOrJNu1XIc9tNYDfafPzKbCBk2IdVfrLdQA5cOEZSU0kXVALFGOlp&#13;
+FoX9eLn9Vy1FTQ/RjAL7Bb4QCIffYPNzvC63kzRlUQ1DC7bI47uyAH0UvjMRn/8aOTgHdgyBYhVo&#13;
+ueN8B2tEhkhUAqH8n99XAi6pJCSz7ZVLp8nmi42alb3tBxpC/DJlBIhoRLkrqhXJeAp9ymot5bm/&#13;
+Xe3swTBiKZM3NyxQgRQCVqhUlYTSv9iF04X6XdLkWIdnpeuHsmYbNzlp2+JJzcSOb/B/JBGNn8Lz&#13;
+SctmYrlvdqczhCHZGhViJ/VtcktOLjV+3yHzh9sSKmbmUYJ3n0WTWQzFlu8qMr+qKGYO/Us3k685&#13;
+Hnpjh6igpHCBhDxoGYkHZqKzD47vet2ltqEutlYn33L1Nczg29XgNkzziwKv6WFhQucHSn+293h+&#13;
+X4vUDkj4JUJ599flRPbXdT8gL+Prvy2mUDmr2Q1U4unJaTkfTGLsLinvoeMEnTj1ypvV3xeLsbGY&#13;
+zkGZ0BhMrOHDBs6Jy76n21Dk5s6KlRrpRpzKGzaKbTauSW1Kw1znGj0v5/TiG1QNRk6i9TfKTN3n&#13;
+U9ihixwdGwrlR6xKBLYZwWTO3mTAjr3HdrTbQejrcQ==
+</X509Certificate>
+</X509Data>
+<KeyValue>
+<RSAKeyValue>
+<Modulus>guzxC+RKtbUNoqB+MN0dG+91giDBhPojHUkhrKHFoIMJaBL78nMSNq+Gqstjcmg0MEf2GBpzEPZt&#13;
+vuvdLQERY6QIGQK59uftcKd10G8zoDzWeOZD0U/rv59dM7lHq+07voI4WYvHWx9GR7a0jagBwzia&#13;
+VyrpP2XOQI3ILbZ7VCbabQdLYTis4CrROLSrMxmQYONanxdQ7NdZR76YmLI0Isg0bB5mElbe5w+Q&#13;
+AB2nbJBGr/RGZctIdeQ3gnWYe27E1bUSl3LL33IzB9POD7iIb6m7Qd5hd7h5z3EkJ9V2jA5zAEhw&#13;
+URAeho67IWE01QywrQRIbqUSQOnpTlfbY+5c2w==</Modulus>
+<Exponent>AQAB</Exponent>
+</RSAKeyValue>
+</KeyValue>
+</KeyInfo>
+</Signature></ns3:rDE>
+2026-02-03T21:04:58.473-03:00 DEBUG 27232 --- [           main] o.s.ws.client.core.WebServiceTemplate    : Opening [org.springframework.ws.transport.http.HttpUrlConnection@670c171c] to [https://sifen-test.set.gov.py/de/ws/transmision/recepcion-de]
+2026-02-03T21:04:58.481-03:00 TRACE 27232 --- [           main] o.s.ws.client.MessageTracing.sent        : Sent request [<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Header/><env:Body><rEnviDe xmlns="http://ekuatia.set.gov.py/sifen/xsd">  <dId>1</dId>  <xDe><ns3:rDE xmlns:ns2="http://www.w3.org/2000/09/xmldsig#" xmlns:ns3="http://ekuatia.set.gov.py/sifen/xsd"><dVerFor>150</dVerFor><DE Id="01800015681001001000000122026020311234567891"><dId>01800015681001001000000122026020311234567891</dId><dDvId>1</dDvId><dFecFirma>2026-02-03T10:00:00</dFecFirma><dSisFact>1</dSisFact><gOpeDE><iTipEmi>1</iTipEmi><dDesTipEmi>Normal</dDesTipEmi><dCodSeg>123456</dCodSeg></gOpeDE><gTimb><iTiDE>1</iTiDE><dDesTiDE>Factura</dDesTiDE><dNumTim>12345678</dNumTim><dEst>001</dEst><dPunExp>001</dPunExp><dNumDoc>0000001</dNumDoc><dFeIniT>2026-01-01</dFeIniT></gTimb><gDatGralOpe><dFeEmiDE>2026-02-03T10:00:00</dFeEmiDE><gEmis><dRucEm>80001568</dRucEm><dDVEmi>1</dDVEmi><iTipCont>2</iTipCont><dNomEmi>Test S.A.</dNomEmi><dDirEmi>Calle 1</dDirEmi><dNumCas>1</dNumCas><cDepEmi>1</cDepEmi><dDesDepEmi>Capital</dDesDepEmi><cCiuEmi>1</cCiuEmi><dDesCiuEmi>Asu</dDesCiuEmi><dTelEmi>123</dTelEmi><dEmailE>a@a.com</dEmailE></gEmis><gDatRec><iNatRec>1</iNatRec><iTiOpe>1</iTiOpe><cPaisRec>PRY</cPaisRec><dDesPaisRe>Paraguay</dDesPaisRe><dNomRec>Cliente</dNomRec><dDirRec>Calle 2</dDirRec><dNumCasRec>1</dNumCasRec><cDepRec>1</cDepRec><dDesDepRec>Capital</dDesDepRec><cCiuRec>1</cCiuRec><dDesCiuRec>Asu</dDesCiuRec></gDatRec></gDatGralOpe><gDtipDE><gCamFE><iIndPres>1</iIndPres><dDesIndPres>Pres</dDesIndPres></gCamFE></gDtipDE><gTotSub><dTotOpe>100</dTotOpe><dTotGralOpe>100</dTotGralOpe><dTotIVA>0</dTotIVA></gTotSub><gCamItem><dCodInt>1</dCodInt><dDesProSer>Prod</dDesProSer><cUniMed>77</cUniMed><dDesUniMed>Uni</dDesUniMed><dCantProSer>1</dCantProSer><gValorItem><dPUnitPro>100</dPUnitPro><dTotBruOpeItem>100</dTotBruOpeItem><gValorRestaItem><dTotOpeItem>100</dTotOpeItem></gValorRestaItem></gValorItem><gCamIVA><iAfecIVA>3</iAfecIVA><dDesAfecIVA>Exento</dDesAfecIVA><dPropIVA>0</dPropIVA><dTasaIVA>0</dTasaIVA><dLiqIVAItem>0</dLiqIVAItem></gCamIVA></gCamItem></DE><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/>
+<Reference URI="">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/>
+<DigestValue>CgPZ50SOCq++S2Eyc5pnTFIova0XeL4mQhYUMOpPXps=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>
+NpLrPunHiot9j2ISoZHOxHo5fFRZ4FW89quppmnZ/iU18N5v7IkKP5+Td6yuegxnQI7p3iu6T2A+&#13;
+X1VpnMFb0B+L9bX5iJvxrdq3S9OwHDN0lqm6nWC04XwlsKDq61r8MAl5p7sT4S3CyViggKlP6f1n&#13;
+KKRnI6MMtkgMlZIeId35GVRQ3ygADslh1pnp4m+781srxq9npsu70Oj0Z4QYycYKCGTClYo/oH7L&#13;
+9U0v2egvJrXm67mU3CVWqVAW2I+Wj5ya7hq/c8X5hlxC670GZJZtKSkHP8wGmZSj09eVM3SZuFnL&#13;
+3tdwHTNae4+hhpNbCD9V3KcACL4e9s9dstl3OA==
+</SignatureValue>
+<KeyInfo>
+<X509Data>
+<X509Certificate>
+MIIJAzCCBuugAwIBAgIIEc5yYCzv5LgwDQYJKoZIhvcNAQELBQAwWjEaMBgGA1UEAwwRQ0EtRE9D&#13;
+VU1FTlRBIFMuQS4xFjAUBgNVBAUTDVJVQzgwMDUwMTcyLTExFzAVBgNVBAoMDkRPQ1VNRU5UQSBT&#13;
+LkEuMQswCQYDVQQGEwJQWTAeFw0yNjAxMjMxODIwMDBaFw0yNzAxMjMxODIwMDBaMIGvMSMwIQYD&#13;
+VQQDDBpBTkdFTCBEQVZJRCBNQUxET05BRE8gU09TQTESMBAGA1UEBRMJQ0k0OTQ1MjU0MRQwEgYD&#13;
+VQQqDAtBTkdFTCBEQVZJRDEXMBUGA1UEBAwOTUFMRE9OQURPIFNPU0ExCzAJBgNVBAsMAkYxMSsw&#13;
+KQYDVQQKDCJDRVJUSUZJQ0FETyBDVUFMSUZJQ0FETyBUUklCVVRBUklPMQswCQYDVQQGEwJQWTCC&#13;
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAILs8QvkSrW1DaKgfjDdHRvvdYIgwYT6Ix1J&#13;
+IayhxaCDCWgS+/JzEjavhqrLY3JoNDBH9hgacxD2bb7r3S0BEWOkCBkCufbn7XCnddBvM6A81njm&#13;
+Q9FP67+fXTO5R6vtO76COFmLx1sfRke2tI2oAcM4mlcq6T9lzkCNyC22e1Qm2m0HS2E4rOAq0Ti0&#13;
+qzMZkGDjWp8XUOzXWUe+mJiyNCLINGweZhJW3ucPkAAdp2yQRq/0RmXLSHXkN4J1mHtuxNW1Epdy&#13;
+y99yMwfTzg+4iG+pu0HeYXe4ec9xJCfVdowOcwBIcFEQHoaOuyFhNNUMsK0ESG6lEkDp6U5X22Pu&#13;
+XNsCAwEAAaOCBHUwggRxMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUoT2FK83YLJYfOQIMn1M7&#13;
+WNiVC3swgZQGCCsGAQUFBwEBBIGHMIGEMFUGCCsGAQUFBzAChklodHRwczovL3d3dy5kaWdpdG8u&#13;
+Y29tLnB5L3VwbG9hZHMvY2VydGlmaWNhZG8tZG9jdW1lbnRhLXNhLTE1MzUxMTc3NzEuY3J0MCsG&#13;
+CCsGAQUFBzABhh9odHRwczovL3d3dy5kaWdpdG8uY29tLnB5L29jc3AvMIHnBgNVHREEgd8wgdyB&#13;
+G2FtYWxkb25hZG9AbmVvc3lzdGVtLmNvbS5weaSBvDCBuTEpMCcGA1UEDQwgRklSTUEgRUxFQ1RS&#13;
+T05JQ0EgZGUgbml2ZWwgbWVkaW8xHjAcBgNVBAwMFUdFUkVOVEUgREUgVEVDTk9MT0dJQTEWMBQG&#13;
+A1UEBRMNUlVDODAwOTQxNjUtOTElMCMGA1UECwwcVEVDTk9MT0dJQSBERSBMQSBJTkZPUk1BQ0lP&#13;
+TjEtMCsGA1UECgwkTkVPIFNZU1RFTSBQQVJBR1VBWSBTT0NJRURBRCBBTk9OSU1BMIIB5QYDVR0g&#13;
+BIIB3DCCAdgwggHUBg0rBgEEAYL5OwEBAQwBMIIBwTAvBggrBgEFBQcCARYjaHR0cHM6Ly93d3cu&#13;
+ZGlnaXRvLmNvbS5weS9kZXNjYXJnYXMwggGMBggrBgEFBQcCAjCCAX4eggF6AEMAZQByAHQAaQBm&#13;
+AGkAYwBhAGQAbwAgAGMAdQBhAGwAaQBmAGkAYwBhAGQAbwAgAGQAZQAgAGYAaQByAG0AYQAgAGUA&#13;
+bABlAGMAdAByAPMAbgBpAGMAYQAgAHQAaQBwAG8AIABGADEAIAAoAGMAbABhAHYAZQBzACAAZQBu&#13;
+ACAAbQDzAGQAdQBsAG8AIABzAG8AZgB0AHcAYQByAGUAKQAsACAAcwB1AGoAZQB0AGEAIABhACAA&#13;
+bABhAHMAIABjAG8AbgBkAGkAYwBpAG8AbgBlAHMAIABkAGUAIAB1AHMAbwAgAGUAeABwAHUAZQBz&#13;
+AHQAYQBzACAAZQBuACAAbABhACAARABlAGMAbABhAHIAYQBjAGkA8wBuACAAZABlACAAUAByAOEA&#13;
+YwB0AGkAYwBhAHMAIABkAGUAIABDAGUAcgB0AGkAZgBpAGMAYQBjAGkA8wBuACAAZABlACAARABP&#13;
+AEMAVQBNAEUATgBUAEEAIABTAC4AQQAuMCoGA1UdJQEB/wQgMB4GCCsGAQUFBwMCBggrBgEFBQcD&#13;
+BAYIKwYBBQUHAwEwewYDVR0fBHQwcjA0oDKgMIYuaHR0cHM6Ly93d3cuZGlnaXRvLmNvbS5weS9j&#13;
+cmwvZG9jdW1lbnRhX2NhLmNybDA6oDigNoY0aHR0cHM6Ly93d3cuZG9jdW1lbnRhLmNvbS5weS9k&#13;
+aWdpdG8vZG9jdW1lbnRhX2NhLmNybDAdBgNVHQ4EFgQUQcwR8FwkDqQiuJGYNz3loJdLF2gwDgYD&#13;
+VR0PAQH/BAQDAgXgMA0GCSqGSIb3DQEBCwUAA4ICAQB+tF5qEU9WKV+7KrUvy5nFPuSf5Lrw2qM6&#13;
+52i5oXQmDVbS+hV2NPTE16NYOrJNu1XIc9tNYDfafPzKbCBk2IdVfrLdQA5cOEZSU0kXVALFGOlp&#13;
+FoX9eLn9Vy1FTQ/RjAL7Bb4QCIffYPNzvC63kzRlUQ1DC7bI47uyAH0UvjMRn/8aOTgHdgyBYhVo&#13;
+ueN8B2tEhkhUAqH8n99XAi6pJCSz7ZVLp8nmi42alb3tBxpC/DJlBIhoRLkrqhXJeAp9ymot5bm/&#13;
+Xe3swTBiKZM3NyxQgRQCVqhUlYTSv9iF04X6XdLkWIdnpeuHsmYbNzlp2+JJzcSOb/B/JBGNn8Lz&#13;
+SctmYrlvdqczhCHZGhViJ/VtcktOLjV+3yHzh9sSKmbmUYJ3n0WTWQzFlu8qMr+qKGYO/Us3k685&#13;
+Hnpjh6igpHCBhDxoGYkHZqKzD47vet2ltqEutlYn33L1Nczg29XgNkzziwKv6WFhQucHSn+293h+&#13;
+X4vUDkj4JUJ599flRPbXdT8gL+Prvy2mUDmr2Q1U4unJaTkfTGLsLinvoeMEnTj1ypvV3xeLsbGY&#13;
+zkGZ0BhMrOHDBs6Jy76n21Dk5s6KlRrpRpzKGzaKbTauSW1Kw1znGj0v5/TiG1QNRk6i9TfKTN3n&#13;
+U9ihixwdGwrlR6xKBLYZwWTO3mTAjr3HdrTbQejrcQ==
+</X509Certificate>
+</X509Data>
+<KeyValue>
+<RSAKeyValue>
+<Modulus>guzxC+RKtbUNoqB+MN0dG+91giDBhPojHUkhrKHFoIMJaBL78nMSNq+Gqstjcmg0MEf2GBpzEPZt&#13;
+vuvdLQERY6QIGQK59uftcKd10G8zoDzWeOZD0U/rv59dM7lHq+07voI4WYvHWx9GR7a0jagBwzia&#13;
+VyrpP2XOQI3ILbZ7VCbabQdLYTis4CrROLSrMxmQYONanxdQ7NdZR76YmLI0Isg0bB5mElbe5w+Q&#13;
+AB2nbJBGr/RGZctIdeQ3gnWYe27E1bUSl3LL33IzB9POD7iIb6m7Qd5hd7h5z3EkJ9V2jA5zAEhw&#13;
+URAeho67IWE01QywrQRIbqUSQOnpTlfbY+5c2w==</Modulus>
+<Exponent>AQAB</Exponent>
+</RSAKeyValue>
+</KeyValue>
+</KeyInfo>
+</Signature></ns3:rDE></xDe></rEnviDe></env:Body></env:Envelope>]
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.571 s <<< FAILURE! -- in com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest
+[ERROR] com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest.testConsultaRuc -- Time elapsed: 1.104 s <<< ERROR!
+org.springframework.ws.client.WebServiceTransportException: Error [400]
+	at org.springframework.ws.client.core.WebServiceTemplate.handleError(WebServiceTemplate.java:666)
+	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:588)
+	at org.springframework.ws.client.core.WebServiceTemplate.sendAndReceive(WebServiceTemplate.java:539)
+	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:493)
+	at org.springframework.ws.client.core.WebServiceTemplate.sendSourceAndReceiveToResult(WebServiceTemplate.java:442)
+	at com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapter.consultaRuc(SifenSoapClientAdapter.java:73)
+	at com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest.testConsultaRuc(SifenSoapClientAdapterTest.java:150)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+[ERROR] com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest.testRecibe -- Time elapsed: 0.265 s <<< ERROR!
+org.springframework.ws.client.WebServiceIOException: I/O error: Connection reset
+	at org.springframework.ws.client.core.WebServiceTemplate.sendAndReceive(WebServiceTemplate.java:543)
+	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:493)
+	at org.springframework.ws.client.core.WebServiceTemplate.sendSourceAndReceiveToResult(WebServiceTemplate.java:442)
+	at com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapter.recibe(SifenSoapClientAdapter.java:43)
+	at com.neosystem.sifen.infrastructure.adapters.sifen.SifenSoapClientAdapterTest.testRecibe(SifenSoapClientAdapterTest.java:140)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:291)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:347)
+	at java.base/java.io.BufferedInputStream.implRead(BufferedInputStream.java:420)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:399)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:827)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:759)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:786)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1706)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1615)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:531)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:307)
+	at org.springframework.ws.transport.http.HttpUrlConnection.getResponseCode(HttpUrlConnection.java:143)
+	at org.springframework.ws.transport.http.AbstractHttpSenderConnection.hasError(AbstractHttpSenderConnection.java:54)
+	at org.springframework.ws.client.core.WebServiceTemplate.hasError(WebServiceTemplate.java:642)
+	at org.springframework.ws.client.core.WebServiceTemplate.doSendAndReceive(WebServiceTemplate.java:586)
+	at org.springframework.ws.client.core.WebServiceTemplate.sendAndReceive(WebServiceTemplate.java:539)
+	... 7 more
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   SifenSoapClientAdapterTest.testConsultaRuc:150 ╗ WebServiceTransport Error [400]
+[ERROR]   SifenSoapClientAdapterTest.testRecibe:140 ╗ WebServiceIO I/O error: Connection reset
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  5.586 s
+[INFO] Finished at: 2026-02-03T21:04:58-03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.2:test (default-test) on project sifen: 
+[ERROR] 
+[ERROR] See C:\Users\angel\Documentos\NeoSystem\Proyectos\sifen\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
