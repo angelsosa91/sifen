@@ -1,21 +1,12 @@
 package com.neosystem.sifen.infrastructure.adapters.sifen;
 
-import com.neosystem.sifen.infrastructure.config.SifenProperties;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.ws.client.core.WebServiceTemplate;
-
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.stream.StreamSource;
-import java.io.StringReader;
-import java.io.StringWriter;
 
 @Service
 @RequiredArgsConstructor
 public class SifenSoapClientAdapter {
 
-    private final WebServiceTemplate webServiceTemplate;
-    private final SifenProperties sifenProperties;
     private final javax.net.ssl.SSLContext sifenSSLContext;
 
     public String recibe(String signedXml, String id) {
@@ -74,7 +65,7 @@ public class SifenSoapClientAdapter {
     private String sendRawSoapRequest(String urlString, String bodyContent) {
         javax.net.ssl.HttpsURLConnection connection = null;
         try {
-            java.net.URL url = new java.net.URL(urlString);
+            java.net.URL url = java.net.URI.create(urlString).toURL();
             connection = (javax.net.ssl.HttpsURLConnection) url.openConnection();
             connection.setSSLSocketFactory(sifenSSLContext.getSocketFactory());
             connection.setRequestMethod("POST");
