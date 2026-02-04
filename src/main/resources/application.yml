@@ -4,14 +4,30 @@ sifen:
     password: ${SIFEN_CERT_PASSWORD:X1MTj!1K}  # Set this in your environment variables
   endpoints:
     test:
-      recibe: https://sifen-test.set.gov.py/de/ws/async/recibe-lote.wsdl
-      consulta: https://sifen-test.set.gov.py/de/ws/consultas/consulta.wsdl
-      evento: https://sifen-test.set.gov.py/de/ws/eventos/evento.wsdl
+      recibe: https://sifen-test.set.gov.py/de/ws/async/recibe-lote
+      consulta: https://sifen-test.set.gov.py/de/ws/consultas/consulta
+      evento: https://sifen-test.set.gov.py/de/ws/eventos/evento
     production:
       recibe: https://sifen.set.gov.py/de/ws/async/recibe-lote
+  test-data:
+    issuer-ruc: "80094165"
+    issuer-dv: "1"
+    issuer-name: "Neosystem Paraguay S.A."
+    timbrado: "80094165"
+    timbrado-start-date: "2025-08-20"
+    establishment: "001"
+    point: "001"
+    id-csc: "1"
+    csc: "ABCD0000000000000000000000000000"
+    security-code: "123456789"
 
 logging:
+  file:
+    name: logs/sifen.log
   level:
+    root: INFO
+    com.neosystem.sifen: DEBUG
     org.springframework.ws: TRACE
+    org.springframework.xml: TRACE
     org.springframework.ws.client.MessageTracing.sent: TRACE
     org.springframework.ws.client.MessageTracing.received: TRACE
